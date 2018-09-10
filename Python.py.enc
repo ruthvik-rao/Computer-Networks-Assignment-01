@@ -1,7 +1,7 @@
 import smtplib
 
 from getpass import getpass
-def main(fromEmail, password, toEmail1, toEmail2, message):
+def main(fromEmail, password, toEmail1, toEmail2, message1, message2):
 	connect = smtplib.SMTP("smtp.gmail.com",587)
 	connect.starttls()
 	connect.login(fromEmail, password)
@@ -12,8 +12,6 @@ def main(fromEmail, password, toEmail1, toEmail2, message):
 fromEmail = input("fromEmail :")                    #fromEmail :Sender Email-id
 
 password = getpass("password :")                       #password :**********
-
-message = input("message")
 
 message1=open('Hello.txt', 'a')                         #appending files
 
